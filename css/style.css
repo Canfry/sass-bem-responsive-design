@@ -1,0 +1,45 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0deg, 0%, 96%);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  line-height: 1.1;
+  margin-top: 0;
+  font-size: 100%;
+}
+
+p {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.container h1 {
+  color: hsl(273deg, 100%, 29%);
+}/*# sourceMappingURL=style.css.map */
