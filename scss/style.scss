@@ -1,19 +1,4 @@
 @forward 'globals';
-@use './util';
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 4rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: util.$secondary-bg-color;
-
-  h1 {
-    color: util.$text-color;
-  }
-}
+@forward 'layout';
 
 // SASS PARTIALS === dispatch your styles into different files

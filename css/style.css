@@ -17,11 +17,15 @@ h3 {
   font-weight: 400;
   line-height: 1.1;
   margin-top: 0;
-  font-size: 100%;
+  color: hsl(273deg, 100%, 29%);
+  padding: 0.8rem;
 }
 
 p {
   margin-top: 0;
+  color: hsl(273deg, 100%, 29%);
+  padding: 0.8rem;
+  font-weight: 300;
 }
 
 a,
@@ -30,16 +34,24 @@ a:active {
   text-decoration: none;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 4rem;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: hsl(0deg, 0%, 100%);
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 40px;
 }
-.container h1 {
-  color: hsl(273deg, 100%, 29%);
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+.grid__main, .grid__sidebar {
+  padding: 2rem;
+}
+.grid__main {
+  background-color: rgb(210, 234, 255);
+}
+.grid__sidebar {
+  background-color: rgb(248, 214, 255);
 }/*# sourceMappingURL=style.css.map */
