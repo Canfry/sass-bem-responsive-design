@@ -1,12 +1,26 @@
+@use '../util' as u;
+@use '../util' as ut;
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   gap: 40px;
+  width: min(100%, 1000px);
+  // max-width: 1000px;
+  margin-inline: auto;
 
-  @media (min-width: 900px) {
+  @include u.breakpoint-up(large) {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto;
+  }
+
+  // @media (max-width: 899) {
+  //   padding: 0 20px;
+  // } OR
+
+  @include u.breakpoint-down(medium) {
+    padding: 0 20px;
   }
 
   &__main,
@@ -15,10 +29,29 @@
   }
 
   &__main {
-    background-color: rgb(210, 234, 255);
+    background-color: hsl(208, 100%, 91%);
+
+    // MinWidth
+    @include u.breakpoint-up(medium) {
+      background-color: hsl(207, 100%, 81%);
+
+      @include u.breakpoint-up(large) {
+        background-color: hsl(207, 100%, 71%);
+      }
+    }
+
+    & h1,
+    & p {
+      color: ut.$text-color-white;
+    }
   }
 
   &__sidebar {
-    background-color: rgb(248, 214, 255);
+    background-color: hsl(290, 100%, 92%);
+
+    // MaxWidth
+    @include u.breakpoint-down(medium) {
+      text-align: center;
+    }
   }
 }
