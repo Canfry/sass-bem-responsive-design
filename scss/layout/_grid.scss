@@ -34,15 +34,16 @@
     // MinWidth
     @include u.breakpoint-up(medium) {
       background-color: hsl(207, 100%, 81%);
-
-      @include u.breakpoint-up(large) {
-        background-color: hsl(207, 100%, 71%);
-      }
+    }
+    @include u.breakpoint-up(large) {
+      background-color: hsl(207, 100%, 71%);
     }
 
     & h1,
     & p {
-      color: ut.$text-color-white;
+      @include u.breakpoint-up(large) {
+        color: ut.$text-color-white;
+      }
     }
   }
 
@@ -52,6 +53,20 @@
     // MaxWidth
     @include u.breakpoint-down(medium) {
       text-align: center;
+    }
+
+    @include u.breakpoint-up(medium) {
+      background-color: hsl(290, 100%, 82%);
+    }
+    @include u.breakpoint-up(large) {
+      background-color: hsl(290, 100%, 72%);
+    }
+
+    & h2,
+    & p {
+      @include u.breakpoint-up(large) {
+        color: ut.$text-color-white;
+      }
     }
   }
 }

@@ -64,13 +64,15 @@ a:active {
     background-color: hsl(207deg, 100%, 81%);
   }
 }
-@media (min-width: 43.75em) and (min-width: 56.25em) {
+@media (min-width: 56.25em) {
   .grid__main {
     background-color: hsl(207deg, 100%, 71%);
   }
 }
-.grid__main h1, .grid__main p {
-  color: white;
+@media (min-width: 56.25em) {
+  .grid__main h1, .grid__main p {
+    color: white;
+  }
 }
 .grid__sidebar {
   background-color: hsl(290deg, 100%, 92%);
@@ -78,5 +80,20 @@ a:active {
 @media (max-width: 56.24875em) {
   .grid__sidebar {
     text-align: center;
+  }
+}
+@media (min-width: 43.75em) {
+  .grid__sidebar {
+    background-color: hsl(290deg, 100%, 82%);
+  }
+}
+@media (min-width: 56.25em) {
+  .grid__sidebar {
+    background-color: hsl(290deg, 100%, 72%);
+  }
+}
+@media (min-width: 56.25em) {
+  .grid__sidebar h2, .grid__sidebar p {
+    color: white;
   }
 }/*# sourceMappingURL=style.css.map */
