@@ -1,5 +1,4 @@
 @use '../util' as u;
-@use '../util' as ut;
 
 .grid {
   display: grid;
@@ -42,7 +41,7 @@
     & h1,
     & p {
       @include u.breakpoint-up(large) {
-        color: ut.$text-color-white;
+        color: u.$text-color-white;
       }
     }
   }
@@ -65,7 +64,7 @@
     & h2,
     & p {
       @include u.breakpoint-up(large) {
-        color: ut.$text-color-white;
+        color: u.$text-color-white;
       }
     }
   }
