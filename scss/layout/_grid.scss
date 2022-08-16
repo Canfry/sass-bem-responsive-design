@@ -4,8 +4,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  gap: 40px;
-  width: min(100%, 1000px);
+  gap: u.rem(40);
+  width: min(100%, u.rem(1000));
   // max-width: 1000px;
   margin-inline: auto;
 
@@ -19,7 +19,7 @@
   // } OR
 
   @include u.breakpoint-down(medium) {
-    padding: 0 20px;
+    padding: 0 u.rem(20);
   }
 
   &__main,

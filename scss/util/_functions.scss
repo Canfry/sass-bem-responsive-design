@@ -1,0 +1,21 @@
+// Create a function that will calculate the number of pixel and turn them into rem units.
+@use 'sass:math';
+
+// font-size: rem(30);
+@function rem($pixel) {
+  // If $pixel has no unit Divide $pixel by 16 to return rems
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    // Else, throw error
+    @error 'value should be without unit only numbers';
+  }
+}
+
+@function em($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + em;
+  } @else {
+    @error 'value should be without unit only numbers';
+  }
+}

@@ -30,7 +30,7 @@ h2 {
   @include util.breakpoint-up(medium) {
     font-size: 28px;
   } */
-  font-size: clamp(1.375rem, 0.875rem + 1.5vw, 2.25rem);
+  font-size: clamp(1.375rem, 0.875rem + 2vw, 2.25rem);
 }
 
 p {
@@ -38,11 +38,11 @@ p {
   color: hsl(273deg, 100%, 29%);
   padding: 0.8rem;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 @media (min-width: 43.75em) {
   p {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -56,8 +56,8 @@ a:active {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  gap: 40px;
-  width: min(100%, 1000px);
+  gap: 2.5rem;
+  width: min(100%, 62.5rem);
   margin-inline: auto;
 }
 @media (min-width: 56.25em) {
@@ -68,7 +68,7 @@ a:active {
 }
 @media (max-width: 56.24875em) {
   .grid {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 }
 .grid__main, .grid__sidebar {

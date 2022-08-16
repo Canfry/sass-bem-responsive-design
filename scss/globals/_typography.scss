@@ -18,7 +18,9 @@ h1 {
   // Use clamp() so can define min and max
   // font-size: clamp(28px, 16px + 2vw, 40px);
   // Using rem:
-  font-size: clamp(1.75rem, 1rem + 2vw, 2.5rem);
+  // font-size: clamp(1.75rem, 1rem + 2vw, 2.5rem);
+  // Using functions
+  font-size: clamp(util.rem(28), util.rem(16) + 2vw, util.rem(40));
 }
 
 h2 {
@@ -26,7 +28,9 @@ h2 {
   @include util.breakpoint-up(medium) {
     font-size: 28px;
   } */
-  font-size: clamp(1.375rem, 0.875rem + 1.5vw, 2.25rem);
+  // font-size: clamp(1.375rem, 0.875rem + 1.5vw, 2.25rem);
+  // Using functions
+  font-size: clamp(util.rem(22), util.rem(14) + 2vw, util.rem(36));
 }
 
 p {
@@ -34,9 +38,9 @@ p {
   color: util.$text-color;
   padding: 0.8rem;
   font-weight: 300;
-  font-size: 18px;
+  font-size: util.rem(18);
   @include util.breakpoint-up(medium) {
-    font-size: 20px;
+    font-size: util.rem(20);
   }
 }
 
